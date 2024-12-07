@@ -1,4 +1,4 @@
-import app from './vite-project/src/app.js';
+import app from './src/app.js';
 
 const PORT = 3000;
 
