@@ -3,13 +3,8 @@ import logger from "../../utils/logger.js";
 import { body, validationResult } from "express-validator";
 
 export const createItem = [
-
-  (req, res, next) => {
-    if (typeof req.body.images === 'string') {
-      req.body.images = [req.body.images]; 
-    }
-    next();
-  },
+  
+  
   body('userName').notEmpty().withMessage('El nombre de usuario es obligatorio'),
   body('title').notEmpty().withMessage('El título es obligatorio'),
   body('talle').notEmpty().withMessage('El talle es obligatorio'),

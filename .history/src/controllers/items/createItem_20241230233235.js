@@ -3,10 +3,10 @@ import logger from "../../utils/logger.js";
 import { body, validationResult } from "express-validator";
 
 export const createItem = [
-
+  // Normalización del campo `images`
   (req, res, next) => {
     if (typeof req.body.images === 'string') {
-      req.body.images = [req.body.images]; 
+      req.body.images = [req.body.images]; // Convertir string a array
     }
     next();
   },

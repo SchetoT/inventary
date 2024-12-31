@@ -6,7 +6,7 @@ export const createItem = [
 
   (req, res, next) => {
     if (typeof req.body.images === 'string') {
-      req.body.images = [req.body.images]; 
+      req.body.images = [req.body.images]; // Convertir string a array
     }
     next();
   },
