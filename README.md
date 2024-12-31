@@ -181,6 +181,7 @@ Solo los usuarios con el rol de **`admin`** pueden crear ítems. Esta ruta está
   "color": "Rojo",
   "images": ["url_imagen1", "url_imagen2"]
 }
+```
 
 
 ## Dependencias
