@@ -127,6 +127,61 @@ Esta ruta devuelve una lista con todos los ítems disponibles en la tienda.
   }
 ]
 ```
+### **POST** `/api/items`
+
+Crea un nuevo ítem.
+
+#### **Descripción**
+
+Esta ruta permite a un usuario con rol de administrador crear un nuevo ítem. Un ítem incluye información como el título, talle, precio, categoría, color y las imágenes asociadas.
+
+#### **Campos Requeridos en el Cuerpo de la Solicitud**
+
+- **`userName`**: ID del usuario que crea el ítem.  
+  Tipo: `string`  
+  Descripción: Es el ID del usuario que está creando el ítem. Este campo se obtiene automáticamente cuando el usuario está autenticado.
+
+- **`title`**: Título del ítem.  
+  Tipo: `string`  
+  Descripción: El nombre o título del ítem, que será visible para los usuarios.
+
+- **`talle`**: Talle del ítem.  
+  Tipo: `string`  
+  Descripción: El tamaño o talle del ítem (ej. S, M, L, XL).
+
+- **`price`**: Precio del ítem.  
+  Tipo: `number`  
+  Descripción: El precio del ítem.
+
+- **`category`**: Categoría del ítem.  
+  Tipo: `string`  
+  Descripción: La categoría del ítem (ej. Ropa, Calzado, Electrónica).
+
+- **`color`**: Color del ítem.  
+  Tipo: `string`  
+  Descripción: El color del ítem (ej. Rojo, Azul, Negro).
+
+- **`images[]`**: Array de URLs de imágenes del ítem.  
+  Tipo: `array of strings`  
+  Descripción: Un array de URLs de imágenes que representan el ítem.
+
+#### **Autorización**
+
+Solo los usuarios con el rol de **`admin`** pueden crear ítems. Esta ruta está protegida mediante autenticación JWT.
+
+#### **Ejemplo de Cuerpo de la Solicitud**
+
+```json
+{
+  "userName": "usuario_id",
+  "title": "Camiseta de Algodón",
+  "talle": "M",
+  "price": 199.99,
+  "category": "Ropa",
+  "color": "Rojo",
+  "images": ["url_imagen1", "url_imagen2"]
+}
+
 
 ## Dependencias
 - express: Framework para Node.js para gestionar rutas.
