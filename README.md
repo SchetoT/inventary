@@ -128,13 +128,13 @@ Esta ruta devuelve una lista con todos los ítems disponibles en la tienda.
 ]
 ```
 
-##Dependencias
+## Dependencias
 - express: Framework para Node.js para gestionar rutas.
 - mongoose: ODM para MongoDB.
 - jsonwebtoken: Librería para generar y verificar JWT.
 - bcryptjs: Librería para encriptar contraseñas.
 - winston: Librería para logging.
 
-##Licencia
+## Licencia
 Este proyecto está bajo la Licencia MIT.
 
