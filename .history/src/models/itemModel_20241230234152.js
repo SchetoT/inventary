@@ -22,7 +22,7 @@ const ItemSchema = new Schema({
   category: { type: String, required: true },
   color: { type: String, required: true },
   dateCreated: { type: Date, default: () => Date.now() },
-  images: { type: [String], required: true }, 
+  images: { type: [String], required: true }, // Cambiado a un array de strings
 });
 
 ItemSchema.post("save", async (doc) => {
