@@ -91,6 +91,7 @@ Inicia sesión con un usuario existente.
   "token": "access_token",
   "refreshToken": "refresh_token"
 }
+```
 ## Rutas de la API - Ítems
 
 ### **GET** `/api/items`
@@ -125,6 +126,8 @@ Esta ruta devuelve una lista con todos los ítems disponibles en la tienda.
     "images": ["url_imagen1", "url_imagen2"]
   }
 ]
+```
+
 ##Dependencias
 - express: Framework para Node.js para gestionar rutas.
 - mongoose: ODM para MongoDB.
